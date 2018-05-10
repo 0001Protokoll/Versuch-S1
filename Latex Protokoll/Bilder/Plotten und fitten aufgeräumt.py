@@ -103,7 +103,7 @@ def plotandfit(Datei1,Datei2,Überschrift,Speicher,R0=1,i=0,xaxes=0,yaxes=0):
     
     plt.title(Überschrift)   ##für jeden Plot allein ohne subplot
     plt.xlabel("Abstand r in $\AA$")
-    plt.ylabel("Energie in Joule")
+    plt.ylabel("Energie in Hartree")
     
     ####defaul ist null, wenn gewünscht zum abstellen der Achsen; hilfreich bei subplotting
     frame1 = plt.gca()
