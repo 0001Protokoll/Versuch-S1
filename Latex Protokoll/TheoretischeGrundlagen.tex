@@ -2,32 +2,30 @@
 %\begin{document}
 
 \section{Theoretische Grundlagen}
-
-Die im Folgenden beschriebenen Systeme werden über die zeitunabhängige Schrödingergleichung ausgrdückt (Gleichung 1). 
+\subsection{Quantentheorie :}
+Die im Folgenden beschriebenen Systeme werden über die zeitunabhängige Schrödingergleichung ausgrdückt (Eq. 1). 
 
 \begin {equation}
-\mathcal{H}\left(r,R\right)\psi\left(r,R\right)=E\psi\left(r,R\right)
+\mathcal{H}\left(r,R\right)\Psi\left(r,R\right)=E\Psi\left(r,R\right)
 \end {equation}
-
-Jedoch steigt die Komplexität der Gleichung stark an, umso größer die Systeme werden, da sämtliche Elektronen und Kerne betrachtet werden. Eine Möglichkeit der Simplifizierung ist hier die Born-Oppenheimer-Näherung (Gleichung 2). 
+\\
+Jedoch steigt die Komplexität der Gleichung stark an, umso größer die Systeme werden, da sämtliche Elektronen und Kerne betrachtet werden müssen. Eine Möglichkeit der Vereinfachung ist hier die Born-Oppenheimer-Näherung (Eq. 2). 
 
 \begin {equation}
 \mathcal{H}\left(r,R\right)=\mathcal{H}_{K}\left(R\right)+\mathcal{H}_{e}\left(r,R\right)
 \end {equation}
-
-Sie approximiert aufgrund der vielfach höheren Masse der Kerne im Vergleich zu den Elektronen, dass die Bewegungen der Kerne und der Elektronen separierbar sind. Außerdem wird angenommen, dass die kinetische Energie der Kerne gleich Null und somit die potentielle Energie konstant ist.
-
-Hieraus ergibt sich die elektronische Schrödingergleichung (Gleichung 3) mit dem Hamilton-Operator wobei die Energie nur noch parametrisch von den Koordinaten der Kerne abhängig ist.
+\\
+Der große Massenunterschied zwischen Atomkern und Elektronen lässt eine Separierung der Bewegungen dieser folgen. Ferner benutzt man eigentlich die deutlich geringeren Geschwindigkeit einer Kernbewegung im Bezug zur Elektronenbewegung, basierend auf den unterschiedlichen Massen. Diese Überlegung führt zur Schlussfolgerung, dass die kinetische Energie der Kerne bei konstantem Kernabstand keinen Einfluss auf die Elektronen besitzt, folglich nur ein parametrisches Potential der beteiligten Kernabstände resultiert. Es ergibt sich die elektronische Schrödingergleichung (Eq. 3) mit dem Hamilton-Operator wobei die Energie nur noch parametrisch von den Koordinaten der Kerne abhängig ist.
 
 \begin {equation}
-\mathcal{H}_e\left(r,R\right)\psi\left(r,R\right)=\left(E\left(R\right)-\mathcal{V}_{KK}\left(R\right)\right)\psi_e\left(r,R\right)
+\mathcal{H}_e\left(r,R\right)\Psi\left(r,R\right)=\left(E\left(R\right)-\mathcal{V}_{KK}\left(R\right)\right)\Psi_e\left(r,R\right)
 \end {equation}
-
- Somit lassen sich Wertepaare aus der Energie des Systems und dem Abstand der Kerne berechnen, welche die Potentialenergieflächen bilden.
-
-Durch die Born-Oppenheimer-Näherung spielen Isotopeneffekte keine Rolle, da die Kerne als in Ruhe approximiert werden und somit keine kinetische Energie besitzen. Die einzigen Terme in denen die Masse der Kerne vorkommen fallen somit weg.
-
-Die Potentialenergieflächen sind abhängig von dem Zustand des Moleküls, da die Schrödingergleichung über die Wellenfunktion mit den Quantenzahlen verbunden ist. Für die Schwingungsspektroskopie ist lediglich der Grundzustand relevant, da vorwiegend unangeregte Moleküle betrachtet werden.
+\\
+Die Potentialfläche bezogen auf die Gesamtenergie des Systems über dem Bindungsabstand folgt aus der Lösung der zuvor beschriebenen elektronischen Schrödingergleichung. Durch die Born-Oppenheimer-Näherung spielen Isotopeneffekte keine Rolle, da die Kerne als in Ruhe approximiert werden und somit keine kinetische Energie besitzen. Die einzigen Terme in denen die Masse der Kerne vorkommen entfallen somit. Die Potentialenergieflächen sind abhängig von dem elektronischen Zustand des Moleküls, da die Schrödingergleichung über die Wellenfunktion mit den Quantenzahlen verbunden ist. Für die Schwingungsspektroskopie ist der Grundzustand besonders relevant, da sich die meisten physikochemische Fragestellungen aufgrund von praxisnähe auf Systeme im Grundzustand beschränken. Der Grundzustand verdeutlich in der Regel einen hochpopulierten Gleichgewichtszustand. Ferner ist die Detektion von kurzlebigen, angeregten Zuständen (wenn überhaupt möglich) nicht trivial.
+\subsection{Verwendete Methoden :}
+Zur Bestimmung der gesuchten Energiewerte bezogen auf die Bindungslänge der zweiatomigen Moleküle CO und HCl wurde mithilfe des Programms -Gaussian- die zeitunabhängige Schrödingergleichung gelöst. Im Allgemeinen berechnet -Gaussian- die Wellenfunktion im Rahmen der Born-Oppenheimer-Näherung genau für eine Kerngeometrie. Folglich wurde ein Intervall von Bindungslängen der betreffenden Moleküle gewählt, und jeweils für jede Geometrie ein Energiewert bestimmt, um representative Ergebnisse zu erhalten.\\	
+\\
+Berechnet wurden die Energien für beide Moleküle mit selbem Intervall an Bindungslängen in zwei vorimplementierten Methoden (B3LYP \& CCSD). Allgemein bestehen die unterschiede der Methoden in den verwendeten Näherungen, um Elektron-Elektron WW zu beschreiben. Im wesentlichen beruhen die Näherung auf Dichtefunktionalen für Elektronen und der daraus resultierenden WW (DFT) oder auf Beschreibung wirkenden Kräfte auf den Elektronen durch ein externes Kraftfeld (HF). Generell gibt es Unterscheidungen von verwendeten quantenmechanischen Methoden, die sich auf die Wahl der Parameter (z.B empirisch) beziehen. Desweiteren gibt es auch die Unterscheidbarkeit basierend auf den mathematischen Weg, wie die betreffenden Funktionale für Elektron-Elektron WW konstruiert werden.  Relativistische Effekte der Elektronen können bei leichten Atomen im Molekül wie HCl und CO vernachlässigt werden. Sollte dies nicht der Fall sein, müssen diese explizit durch Korrelationseffekte berücksichtigt werden. Der bei allen Berechnungen verwendete Basissatz (6-31G/6-31*) aus modifizierten Wasserstofforbitalen wurde, aufgrund geringer Anzahl an Basen, was eine geringe Rechenzeit bewirkt, und auf die Komplexität der Basen bezogen gute Qualität, gewählt.\\
 
 
 %\end{document}

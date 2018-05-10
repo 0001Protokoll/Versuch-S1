@@ -6,12 +6,6 @@
 \newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}} % zentriert mit Breitenangabe
 \newcolumntype{R}[1]{>{\raggedleft\arraybackslash}p{#1}} % rechtsbündig mit Breitenangabe
 
-\section{Zusammenfassung}
-
-Die erhaltenen Bindungslängen stimmen gut mit den Literaturwerten überein (siehe Tabelle~\ref{Tab.1}.) 
-Die mittels der CCSD-Methode gewonnenen Werte nähern sich besser an den Gleichgewichtsabstand der Literatur an als die mit der B3LYP Methode. Die ermittelten Dissoziationsenergien für das CO Molekül sind wie zu erwarten wesentlich größer gegenüber dem HCl Molekül. Die Werte decken sich jedoch deutlich schlechter mit der Literatur als es bei dem Gleichgewichtsabstand der Fall ist. 
-
-
 \section{Auswertung}
 
 
@@ -21,9 +15,7 @@ Die mittels Gaussian erhaltenen Gleichgewichtsabstände wurden in Tabelle~\ref{T
  \centering
  
  
- \caption{Berechnete Gleichgewichtsabstände und Dissoziationsenergien von HCl und CO aus den mittels GAUSSIAN erhaltenen Werten  mit der Methode B3LYP und dem Basissatz 6-31G bzw. der Methode CCSD und dem Basissatz 6-31G*.}
- 
- 
+ \caption{Berechnete Gleichgewichtsabstände und Dissoziationsenergien von HCl und CO aus den mittels GAUSSIAN erhaltenen Werten  mit der Methode B3LYP und dem Basissatz 6-31G bzw. der Methode CCSD und dem Basissatz 6-31G*. Ferner sind experimentell bestimmte Literaturwerte der zu untersuchenden Größen gezeigt.$^{[2]}$ $^{[3]}$}
  \begin{tabular}{L{0.1\textwidth}L{0.20\textwidth}C{0.3\textwidth}C{0.20\textwidth}C{0.20\textwidth}}
 \multicolumn{2}{c}{}&\multicolumn{1}{c}{Gleichgewichtsabstand R}&\multicolumn{2}{c}{Dissoziationsenergie}\\
  
@@ -40,7 +32,7 @@ Die mittels Gaussian erhaltenen Gleichgewichtsabstände wurden in Tabelle~\ref{T
   HCl  & CCSD (MP3)&1.28  & 0.16&420\\
   HCl&Literatur&	1.27455&&429\\
 
-   \multicolumn{4}{c}{https://webbook.nist.gov> und Holemann wiberg 102. Auflage Seite 141}\\
+\\
    
    
  \end{tabular}
@@ -55,7 +47,7 @@ Die mittels Gaussian erhaltenen Gleichgewichtsabstände wurden in Tabelle~\ref{T
 	\end{minipage}
 	
 	
-	\caption{Grafische Auftragung der mit der Born-Oppenheimer-Näherung erhaltenen Energien bei verschiedenen Kernabständen von HCl und CO. Die Werte wurden mittels GAUSSIAN mit der Methode B3LYP und dem Basissatz 6-31G erhalten. Die Grafik wurde mit Python erstellt und über Spyder ausgegeben.}
+	\caption{Grafische Auftragung der mit der Born-Oppenheimer-Näherung erhaltenen Energien bei verschiedenen Kernabständen von HCl und CO. Die Werte wurden mittels GAUSSIAN mit der Methode B3LYP und dem Basissatz 6-31G erhalten.}
 	
 	
 	\label{b3lypzusammen}
@@ -78,17 +70,20 @@ Wie in Abbildung~\ref{b3lypzusammen} zu sehen beschreiben die mit B3LYP errechne
 \end{minipage}
 
 
-\caption{Grafische Auftragung der mit der Born-Oppenheimer-Näherung erhaltenen Energien bei verschiedenen Kernabständen von HCl und CO. Die Werte wurden mittels GAUSSIAN mit der Methode CCSD und dem Basissatz 6-31G* erhalten.Die Grafik wurde mit Python erstellt und über Spyder ausgegeben.}
+\caption{Grafische Auftragung der mit der Born-Oppenheimer-Näherung erhaltenen Energien bei verschiedenen Kernabständen von HCl und CO. Die Werte wurden mittels GAUSSIAN mit der Methode CCSD und dem Basissatz 6-31G* erhalten.}
 
 
 	\label{HCl_CCSD}
 \end{figure}
 
 
-Der Verlauf der Werte, welche durch die CCSD Methode für CO, sowie HCl erhalten wurden, sind in Abbildung~\ref{HCl_CCSD} aufgetragen worden. Bei der Betrachtung der Werte kann beobachtet werden, dass die Entwicklung durch Gaussian um das Minimum noch etwas genauer, als es mittels B3LYP der Fall war, gelungen ist. Jedoch beschreibt die Energie  nach der Dissoziation des Moleküle besonders bei HCl einen Verlauf der gänzlich den Erwartungen widerspricht. Die Kurven sollten eigentlich gegen einen Energiewert konvergieren. 
+Der Verlauf der Werte, welche durch die CCSD Methode für CO, sowie HCl erhalten wurden, sind in Abbildung~\ref{HCl_CCSD} aufgetragen worden. Bei der Betrachtung der Werte kann beobachtet werden, dass die Entwicklung durch CCSD um das Minimum noch etwas genauer, als es mittels B3LYP der Fall war, gelungen ist. Jedoch beschreibt die Energie  nach der Dissoziation des Moleküle besonders bei HCl einen Verlauf der gänzlich den Erwartungen widerspricht. Die Kurven sollten eigentlich gegen einen Energiewert konvergieren. 
 
 
+\section{Zusammenfassung}
 
+Die erhaltenen Bindungslängen stimmen in guter Näherung mit den Literaturwerten überein (siehe Tabelle~\ref{Tab.1}.) 
+Die mittels der CCSD-Methode gewonnenen Werte nähern sich besser an den Gleichgewichtsabstand der Literatur an als die mit der B3LYP Methode. Die ermittelten Dissoziationsenergien für das CO Molekül sind wie zu erwarten wesentlich größer gegenüber dem HCl Molekül. Die Werte decken sich jedoch deutlich schlechter mit der Literatur als es bei dem Gleichgewichtsabstand der Fall ist. Im Allgemeinen sind jedoch richtige Größenordnung und richtige Relation zu erkennen.
 
 
 
