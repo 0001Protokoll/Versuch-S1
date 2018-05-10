@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.7.10)  10 MAY 2018 19:57
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.7.10)  10 MAY 2018 20:38
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1708,23 +1708,22 @@ Overfull \hbox (2.28003pt too wide) in paragraph at lines 92--98
  []
 
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 112.
+(babel)             in language  on input line 109.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 112.
+(babel)             in language  on input line 109.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 112.
+(babel)             in language  on input line 113.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 112.
+(babel)             in language  on input line 113.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 113.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 113.
 [5 <./Bilder/HCl_CCSD.pdf> <./Bilder/CO_CCSD.pdf
 
 pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./Bilder/CO_CCSD.pdf): PDF i
 nclusion: multiple pdfs with page group included in a single page
->]
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 114.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 114.
-)
+>])
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 29.
 Package babel Info: Redefining ngerman shorthand "~
@@ -1937,7 +1936,7 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 42.
 Here is how much of TeX's memory you used:
  24399 strings out of 492995
  462153 string characters out of 6132704
- 783145 words of memory out of 5000000
+ 783211 words of memory out of 5000000
  27495 multiletter control sequences out of 15000+600000
  564609 words of font info for 159 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1952,7 +1951,7 @@ e/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/
 /texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2017/texmf-
 dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/local/texlive/2017/texmf-dist/fo
 nts/type1/urw/palatino/uplr8a.pfb>
-Output written on Hauptgerüst.pdf (14 pages, 166560 bytes).
+Output written on Hauptgerüst.pdf (14 pages, 166151 bytes).
 PDF statistics:
  333 PDF objects out of 1000 (max. 8388607)
  165 compressed objects within 2 object streams
