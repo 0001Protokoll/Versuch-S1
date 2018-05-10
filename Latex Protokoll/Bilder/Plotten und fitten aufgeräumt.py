@@ -52,7 +52,7 @@ Speicher=np.array([
         ])
     
     
-    
+Diss=[]   
 ####das nennt man eine Funktion definieren 
 def plotandfit(Datei1,Datei2,Überschrift,Speicher,R0=1,i=0,xaxes=0,yaxes=0):
     
@@ -92,7 +92,7 @@ def plotandfit(Datei1,Datei2,Überschrift,Speicher,R0=1,i=0,xaxes=0,yaxes=0):
     mi=min(Datei1[:,2])
     indices = [i for i, x in enumerate(Datei1[:,2]) if x == mi]
     a=Datei1[indices,1]    
-    Disso=[max(Datei2[:,2])*219474.63-min(Datei1[:,2])*219474.63,str(Überschrift),str(a[0])]
+    Disso=[max(Datei2[:,2])-min(Datei1[:,2]),str(Überschrift),str(a[0])]
     
     Diss.append(Disso) #### Array für den Save nachher von R0 und Diss.k.
     
