@@ -9,9 +9,18 @@
 \section{Auswertung}
 
 
-Die mittels Gaussian erhaltenen Gleichgewichtsabstände wurden in Tabelle~\ref{Tab.1} zusammengetragen. Dabei handelt es sich um den Atomabstand R, welcher bei den jeweiligen minimalsten Energiewerten einer Datenreihe zu finden ist. Die Dissoziationensenergie wurden erhalten, indem der größte Energiewert der Asymptote vom kleinsten Energiewert der Kurve subtrahiert worden ist.
-
- \begin{table}[H]
+Die mittels Gaussian erhaltenen Gleichgewichtsabstände wurden in Tabelle~\ref{Tab.1} zusammengetragen. Dabei handelt es sich um den Atomabstand R, welcher bei den jeweiligen minimalsten Energiewerten einer Datenreihe zu finden ist. Die Dissoziationensenergie wurden erhalten, indem der größte Energiewert der Asymptote vom kleinsten Energiewert der Kurve subtrahiert worden ist.Anschließend wurde der erhaltene Energiewert von Hartree in kJ/mol gemäß der Beispielrechnung 4 umgerechnet, um diese mit den gefundenen Literaturwerten besser vergleichen zu können.
+%\begin{shaded}
+\begin{align}
+\notag
+\SI[per-mode=fraction]{0.48}{H}=0.48 \cdot (2\cdot \si{hc}\si{R_\infty})\approx \SI[mode=math]{2.092e-18}{J} 
+\\
+\addlinespace
+\SI[mode=math]{2.092e-18}{J}\cdot \si{N_A} \approx \SI[per-mode=fraction]{1260}{kJ\per\mol}
+\label{umrechn.}
+\end{align}
+%\end{shaded}
+ \begin{table}[ht]
  \centering
  
  
@@ -39,71 +48,89 @@ Die mittels Gaussian erhaltenen Gleichgewichtsabstände wurden in Tabelle~\ref{T
  \label{Tab.1}
  \end{table}
 
+\subsection*{Berechnung der Dissoziationsenergie}
 
 
 
-\begin{table}[htbp]
-  \centering
-   \caption{Berechnete Gleichgewichtsabstände und Dissoziationsenergien von HCl und CO aus den mittels GAUSSIAN erhaltenen Werten  mit der Methode B3LYP und dem Basissatz 6-31G bzw. der Methode CCSD und dem Basissatz 6-31G*.}
-  \begin{tabularx}{\columnwidth}{XL{0.15\textwidth}L{0.20\textwidth}L{0.10\textwidth}L{0.10\textwidth}}
-\multicolumn{2}{c}{}&\multicolumn{1}{c}{Gleichgewichtsabstand}&\multicolumn{2}{c}{Dissoziationsenergie}\\
-    
-      Molekül  & Methode &  R in Ängstrom &   in Hartree & in kJ/mol \\
-      \toprule[2pt]
-  CO  &B3LYP & 1.17 &  0.48&1260 \\
-  CO  & CCSD (SCF)&1.11 & 0.49&1290\\
-  CO  & CCSD (MP2)&1.15 & 0.59&1550\\
-  CO  & CCSD (MP3)&1.13 & 0.55&1440\\
-    CO&Literatur&	1.128323&&1077\\
-
-  HCl  &B3LYP& 1.33 &  0.19&498.0\\
-  HCl  & CCSD (SCF)&1.27  & 0.34&892\\
-  HCl  & CCSD (MP2)&1.28  & 0.19&498\\
-  HCl  & CCSD (MP3)&1.28  & 0.16&420\\
-  HCl&Literatur&	1.27455&&429\\
-    
-  \end{tabularx}
-\end{table}
 
 
 
-\begin{figure}[ht]
-	\centering	
-	\begin{minipage}{0.5\textwidth}
-	\includegraphics[width=\columnwidth]{Bilder/b3lypzusammen}
+
+Wie in Abbildung~4.1 und Abbildung~4.3 zu sehen beschreiben die mit B3LYP errechneten Werte den Verlauf eines Morsepotentials. Es sei hier erwähnt, dass das tatsächliche Minimum der Kurven nicht bei Null liegt, sondern das Minimum von allen Energiewerten Subtrahiert worden ist, um dieses als Nullpunkt zu definieren. Dadurch ist es nun möglich anhand der Grafen eine qualitative Aussage über die Dissoziationsenergie, sowie den Gleichgewichtsabstand zu machen.
+
+
+
+Der Verlauf der Werte, welche durch die CCSD Methode für CO, sowie HCl erhalten wurden, sind in ebenso aufgetragen worden. Bei der Betrachtung der Werte kann beobachtet werden, dass die Entwicklung durch CCSD um das Minimum noch etwas genauer, als es mittels B3LYP der Fall war, gelungen ist. Jedoch beschreibt die Energie  nach der Dissoziation des Moleküle besonders bei HCl einen Verlauf der gänzlich den Erwartungen widerspricht. Gründe für dieses abweichende Verhalten können in einer schlechten bzw. nicht vorhandenen Modellierung der long range WW liegen.
+ 
+\begin{figure}[H]
+	\center
+	\begin{minipage}{0.8\textwidth}
+	\includegraphics[width=\textwidth]{Bilder/HCl_b3lyp.pdf}
+	
 	\end{minipage}
+\begin{minipage}{0.8\textwidth}
+	\includegraphics[width=\textwidth]{Bilder/HCl_CSSD(MP3).pdf}
 	
+	\end{minipage}	
+	\caption{Grafische Auftragung der mit der Born-Oppenheimer-Näherung erhaltenen Energien bei verschiedenen Kernabständen von HCl. Die Werte wurden mittels GAUSSIAN mit der Methode B3LYP und dem Basissatz 6-31G (oben) bzw. mit der Methode CCSD und dem Basissatz 6-31G* (unten) erhalten. Die Grafiken wurde mit Python erstellt und über Spyder ausgegeben.}
+	\label{hcl}
+		
 	
-	\caption{Grafische Auftragung der mit der Born-Oppenheimer-Näherung erhaltenen Energien bei verschiedenen Kernabständen von HCl und CO. Die Werte wurden mittels GAUSSIAN mit der Methode B3LYP und dem Basissatz 6-31G erhalten.Die Grafiken wurde mit Python erstellt und über Spyder ausgegeben}
+\end{figure}
 	
+
+\begin{figure}[H]
+	\center
+	\begin{minipage}{0.8\textwidth}
+	\includegraphics[width=\textwidth]{Bilder/HCl_CSSD(SCF).pdf}
 	
-	\label{b3lypzusammen}
+	\end{minipage}
+\begin{minipage}{0.8\textwidth}
+	\includegraphics[width=\textwidth]{Bilder/HCl_CSSD(MP2).pdf}
+	
+	\end{minipage}	
+	\caption{Grafische Auftragung der mit der Born-Oppenheimer-Näherung erhaltenen Energien bei verschiedenen Kernabständen von HCl. Die Werte wurden mittels GAUSSIAN mit der Methode CCSD und dem Basissatz 6-31G* erhalten. Die Grafiken wurde mit Python erstellt und über Spyder ausgegeben.}	
 \end{figure}
 
 
-Wie in Abbildung~\ref{b3lypzusammen} zu sehen beschreiben die mit B3LYP errechneten Werte den Verlauf eines Morsepotentials. Es sei hier erwähnt, dass das tatsächliche Minimum der Kurven nicht bei Null liegt, sondern das Minimum von allen Energiewerten Subtrahiert worden ist, um dieses als Nullpunkt zu definieren. Dadurch ist es nun möglich anhand der Grafen eine qualitative Aussage über die Dissoziationsenergie, sowie den Gleichgewichtsabstand zu machen.
 
 
-  
+
+
 
  
 \begin{figure}[H]
+	\center
+	\begin{minipage}{0.8\textwidth}
+	\includegraphics[width=\textwidth]{Bilder/CO_b3lyp.pdf}
 	
-\begin{minipage}{0.5\textwidth}
-	\includegraphics[width=\textwidth]{Bilder/HCl_CCSD}
-\end{minipage}
-\begin{minipage}{0.5\textwidth}
-	\includegraphics[width=\textwidth]{Bilder/CO_CCSD}
-\end{minipage}
+	\end{minipage}
+\begin{minipage}{0.8\textwidth}
+	\includegraphics[width=\textwidth]{Bilder/CO_CSSD(MP3).pdf}
+	
+	\end{minipage}	
+	\caption{Grafische Auftragung der mit der Born-Oppenheimer-Näherung erhaltenen Energien bei verschiedenen Kernabständen von CO. Die Werte wurden mittels GAUSSIAN mit der Methode B3LYP und dem Basissatz 6-31G (oben) bzw. mit der Methode CCSD und dem Basissatz 6-31G* (unten) erhalten. Die Grafiken wurde mit Python erstellt und über Spyder ausgegeben.}
+	\label{CO}
+		
+	
+\end{figure}
+	
 
-\caption{Grafische Auftragung der mit der Born-Oppenheimer-Näherung erhaltenen Energien bei verschiedenen Kernabständen von HCl und CO. Die Werte wurden mittels GAUSSIAN mit der Methode CCSD und dem Basissatz 6-31G* erhalten. Die Grafiken wurde mit Python erstellt und über Spyder ausgegeben.}
-
-
-	\label{HCl_CCSD}
+\begin{figure}[H]
+	\center
+	\begin{minipage}{0.8\textwidth}
+	\includegraphics[width=\textwidth]{Bilder/CO_CSSD(SCF).pdf}
+	
+	\end{minipage}
+\begin{minipage}{0.8\textwidth}
+	\includegraphics[width=\textwidth]{Bilder/CO_CSSD(MP2).pdf}
+	
+	\end{minipage}	
+	\caption{Grafische Auftragung der mit der Born-Oppenheimer-Näherung erhaltenen Energien bei verschiedenen Kernabständen von CO. Die Werte wurden mittels GAUSSIAN mit der Methode CCSD und dem Basissatz 6-31G* erhalten. Die Grafiken wurde mit Python erstellt und über Spyder ausgegeben.}	
 \end{figure}
 
 
-Der Verlauf der Werte, welche durch die CCSD Methode für CO, sowie HCl erhalten wurden, sind in Abbildung~\ref{HCl_CCSD} aufgetragen worden. Bei der Betrachtung der Werte kann beobachtet werden, dass die Entwicklung durch CCSD um das Minimum noch etwas genauer, als es mittels B3LYP der Fall war, gelungen ist. Jedoch beschreibt die Energie  nach der Dissoziation des Moleküle besonders bei HCl einen Verlauf der gänzlich den Erwartungen widerspricht. Gründe für dieses abweichende Verhalten können in einer schlechten bzw. nicht vorhandenen Modellierung der long range WW liegen.
+
 
 
 \section{Zusammenfassung}

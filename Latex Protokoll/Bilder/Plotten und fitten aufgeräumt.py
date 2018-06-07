@@ -65,7 +65,8 @@ def plotandfit(Datei1,Datei2,Überschrift,Speicher,R0=1,i=0,xaxes=0,yaxes=0):
     
     xdata2=np.append(x1,x2)
     ydata2=np.append(y1,y2)
-    
+    print (len(xdata2))
+    print (len(ydata2))
     
     
     ##################### ab hier wird gefittet  
@@ -129,7 +130,7 @@ def plotandfit(Datei1,Datei2,Überschrift,Speicher,R0=1,i=0,xaxes=0,yaxes=0):
     ##### jeder Plot sollte für sich gespeichert werden. funktioniet aber nicht so wie gewünscht
     speichername= str(Speicher)    
     plt.savefig('%s.pdf'%(speichername))   
-    
+    plt.show()
     
     
     
@@ -156,10 +157,10 @@ plotandfit(data[0],data[1],Überschrift[0],Speicher[0],1,0,0,0)
 #plt.subplot(2,1,2)
 plotandfit(data[2],data[3],Überschrift[1],Speicher[1],1,0,0,0)
 
-plt.title('von HCl und CO') 
-plt.ylim(-0.1,0.6)
-plt.savefig('b3lypzusammen.pdf')
-plt.show()
+#plt.title('von HCl und CO') 
+#plt.ylim(-0.1,0.6)
+#plt.savefig('b3lypzusammen.pdf')
+#plt.show()
 
 
 
@@ -169,10 +170,10 @@ for i in range(2,5):
     b= prepare_array(data[4],i)
     plotandfit(b,a,Überschrift[i],Speicher[i],1,i,0,0)
 
-plt.ylim(-0.2,0.4)
-plt.title('HCl mit Methode CCSD')
-plt.savefig('HCl_CCSD.pdf')     
-plt.show()
+#plt.ylim(-0.2,0.4)
+#plt.title('HCl mit Methode CCSD')
+#plt.savefig('HCl_CCSD.pdf')     
+#plt.show()
         
         
         
@@ -180,7 +181,7 @@ plt.show()
 for i in range(2,5):   
     a= prepare_array(data[7],i)
     b= prepare_array(data[6],i)
-    plotandfit(a,b,Überschrift[i+3],Speicher[i],1,i,0,0)
+    plotandfit(a,b,Überschrift[i+3],Speicher[i+3],1,i,0,0)
     
     
    
